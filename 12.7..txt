@@ -1,0 +1,19 @@
+
+money = int(input("внесите сумму, которую планируете внести на депозит: "))
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+
+print ("Процентная ставка банков составит: ")
+for k, v in per_cent.items():
+    print(k, "=", v)
+
+print ("Сумма накопленных средств за год вклада составит: ")
+for k, v in per_cent.items():
+    v = v * money
+    print(k, "=", v)
+
+for k, v in per_cent.items():
+    v_list = v * money
+
+a = max(v for v in per_cent.values() if isinstance(v, (int, float)))
+deposit = a * money
+print("Максимальная сумма, которую Вы можете заработать: ", deposit)
