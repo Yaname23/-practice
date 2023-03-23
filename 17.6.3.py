@@ -103,4 +103,3 @@ LL.popleft()
 
 print(LL)
 print(len(LL))
-
